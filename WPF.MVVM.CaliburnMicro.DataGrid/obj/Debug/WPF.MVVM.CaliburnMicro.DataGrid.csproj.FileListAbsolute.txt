@@ -22,3 +22,6 @@ C:\Code\WPF.MVVM.CaliburnMicro.DataGrid\WPF.MVVM.CaliburnMicro.DataGrid\obj\Debu
 C:\Code\WPF.MVVM.CaliburnMicro.DataGrid\WPF.MVVM.CaliburnMicro.DataGrid\obj\Debug\WPF.MVVM.CaliburnMicro.DataGrid.csproj.CopyComplete
 C:\Code\WPF.MVVM.CaliburnMicro.DataGrid\WPF.MVVM.CaliburnMicro.DataGrid\obj\Debug\WPF.MVVM.CaliburnMicro.DataGrid.exe
 C:\Code\WPF.MVVM.CaliburnMicro.DataGrid\WPF.MVVM.CaliburnMicro.DataGrid\obj\Debug\WPF.MVVM.CaliburnMicro.DataGrid.pdb
+C:\Code\WPF.MVVM.CaliburnMicro.DataGrid\WPF.MVVM.CaliburnMicro.DataGrid\bin\Debug\ClassLibrary.dll
+C:\Code\WPF.MVVM.CaliburnMicro.DataGrid\WPF.MVVM.CaliburnMicro.DataGrid\bin\Debug\ClassLibrary.pdb
+C:\Code\WPF.MVVM.CaliburnMicro.DataGrid\WPF.MVVM.CaliburnMicro.DataGrid\obj\Debug\WPF.MVVM.CaliburnMicro.DataGrid.csprojAssemblyReference.cache

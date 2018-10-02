@@ -113,5 +113,11 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LillySiteHelper\LillySiteHelper_ver4\ClassLibrary\ClassLibrary.csproj">
+      <Project>{e46f0870-6d73-491c-8bde-99a999f89e30}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

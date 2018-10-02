@@ -5,8 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF.MVVM.CaliburnMicro.DataGrid.Views"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
+        Title="ShellView" Height="1000" Width="1200" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <!-- Example 1 -->
+            <TextBlock Text="Example 1" Margin="10"/>
+            <DataGrid x:Name="Employees1" Margin="10 0 10 0"  
+                  AlternatingRowBackground="LightCyan" CanUserAddRows="False">
+            </DataGrid>
+
+            <!-- Example 2 -->
+            <TextBlock Text="Example 2" Margin="10"/>
+            <DataGrid x:Name="Employees2" Margin="10 0 10 10" 
+                  AlternatingRowBackground="LightCyan" CanUserAddRows="False" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Full Name" Binding="{Binding Path=FullName}" />
+                    <DataGridTemplateColumn Header="Site">
+                        <!-- View Template - What you see when you are not editing the cell-->
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Site.SiteNameDisplay}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <!-- Edit Template - What you see when you are editing the cell -->
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <ComboBox ItemsSource="{Binding Path=AvailableSites}" SelectedItem="{Binding Path=Site}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Path=SiteNameDisplay}" />
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!-- Example 3 -->
+            <TextBlock Text="Example 3" Margin="10"/>
+            <DataGrid x:Name="Employees3" Margin="10 0 10 10" 
+                  AlternatingRowBackground="LightCyan" CanUserAddRows="False" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="FirstName" Binding="{Binding Path=FirstName}" />
+                    <DataGridTemplateColumn Header="Start Date">
+                        <!-- View Template - What you see when you are not editing the cell-->
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=StartDate, StringFormat=yyyy-MM-dd}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <!-- Edit Template - What you see when you are editing the cell -->
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <DatePicker SelectedDate="{Binding Path=StartDate, StringFormat=yyyy-MM-dd}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </StackPanel>
+
     </Grid>
 </Window>
